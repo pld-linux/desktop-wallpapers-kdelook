@@ -80,10 +80,8 @@ Source23:	http://www.kde-look.org/content/files/4957-kde-1024.jpg
 Source24:	http://www.kde-look.org/content/files/1759-vader.jpg
 # Source24-md5:	e75da9e4949a09be3ea6cc7f88fa1f49
 # Type:  KDE Wallpaper 1024x768
-
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildArch:	noarch
-
 
 %description
 Desktop Background Images from www.kde-look.org.
