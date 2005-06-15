@@ -1,3 +1,4 @@
+# TODO: %{_datadir}/wallpapers dir belongs to X*-libs now
 Summary:	Desktop Background Images from www.kde-look.org
 Summary(pl):	Obrazki na t³o pulpitu z www.kde-look.org
 Name:		desktop-wallpapers-kdelook
@@ -80,17 +81,18 @@ Source23:	http://www.kde-look.org/content/files/4957-kde-1024.jpg
 Source24:	http://www.kde-look.org/content/files/1759-vader.jpg
 # Source24-md5:	e75da9e4949a09be3ea6cc7f88fa1f49
 # Type:  KDE Wallpaper 1024x768
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+URL:		http://www.kde-look.org/
 BuildArch:	noarch
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Desktop Background Images from www.kde-look.org.
+Desktop Background Images from <http://www.kde-look.org/>.
 
 %description -l pl
-Obrazki na t³o pulpitu z www.kde-look.org. 
+Obrazki na t³o pulpitu z <http://www.kde-look.org/>.
 
 %prep
-%setup -q -c %{name}-%{version} -T -D
+%setup -q -c -T
 
 cp -f %{SOURCE0} %{SOURCE1} %{SOURCE2} %{SOURCE3} %{SOURCE4} %{SOURCE5} %{SOURCE6} %{SOURCE7} %{SOURCE8} .
 cp -f %{SOURCE9} %{SOURCE10} %{SOURCE11} %{SOURCE12} %{SOURCE13} %{SOURCE14} %{SOURCE15} %{SOURCE16} .
