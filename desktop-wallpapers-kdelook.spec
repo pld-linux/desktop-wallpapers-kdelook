@@ -3,7 +3,7 @@ Summary(pl):	Obrazki na t³o pulpitu z www.kde-look.org
 Name:		desktop-wallpapers-kdelook
 Version:	00
 Release:	1
-License:	LGPL
+License:	GPL
 Group:		X11/Applications/Multimedia
 Source0:	http://arg0.net/users/vgough/images/2333-valley.png
 # Source0-md5:	476a843ab52775eb412089f277c0083b
