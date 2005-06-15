@@ -1,7 +1,7 @@
 Summary:	Desktop Background Images from www.kde-look.org
 Summary(pl):	Obrazki na t³o pulpitu z www.kde-look.org
 Name:		desktop-wallpapers-kdelook
-Version:	00
+Version:	01
 Release:	1
 License:	GPL
 Group:		X11/Applications/Multimedia
@@ -47,6 +47,39 @@ Source12:	http://www.kde-look.org/content/files/20979-altabadia_summer_1200.jpg
 Source13:	http://www.kde-look.org/content/files/23096-Haallborgsaan.jpg
 # Source13-md5:	e93507e859d44537d93decec2b1f0236
 #Type:  KDE Wallpaper 1600x1200
+Source14:	http://itaka.sourceforge.net/files/tuXPerience3.tar.gz
+# Source14-md5:	b7122ba0037c926a0aefd69eeefdd9aa
+# Type:  KDE Wallpaper 1024x768
+Source15:	http://www.kde-look.org/content/files/3270-k-drop.jpg
+# Source15-md5:	ef4911b9b5b74d35697b53ccdb4151b5
+# Type:  KDE Wallpaper 1280x1024
+Source16:	http://www.kde-look.org/content/files/462-earth1024.jpg
+# Source16-md5:	16b0924971e7743366ee7815623651c3
+# Type:  KDE Wallpaper 1024x768
+Source17:	http://www.kde-look.org/content/files/928-2.jpg
+# Source17-md5:	ae5a98160db7569fe2d58eb51c7b4791
+# Type:  KDE Wallpaper 1024x768
+Source18:	http://www.fi.muni.cz/~xrockai/wall/blue-sun-l.jpg
+# Source18-md5:	0a0e0b2af8def3a04c52263624c95b61
+#Type:  KDE Wallpaper 1600x1200
+Source19:	http://www.kde-look.org/content/files/5691-4elements.jpg
+# Source19-md5:	584581793414c76e16b360fcebb85825
+# Type:  KDE Wallpaper 1024x768
+Source20:	http://www.kde-look.org/content/files/622-tux-sit.jpg
+# Source20-md5:	45e0f738f62eef75cbdfdb0862153a1f
+# Type:  KDE Wallpaper 1024x768
+Source21:	http://www.kde-look.org/content/files/6027-aquapool.tar
+# Source21-md5:	3ab80277f8870c6ef68237870cd819f3
+# Type:  KDE Wallpaper 1024x768
+Source22:	http://www.kde-look.org/content/files/202-devurandom.jpg
+# Source22-md5:	703596e12bec610fcbf725963b8a7b1a
+# Type:  KDE Wallpaper 1024x768
+Source23:	http://www.kde-look.org/content/files/4957-kde-1024.jpg
+# Source23-md5:	85ea44820d4de1f90126c3eb9c47e027
+# Type:  KDE Wallpaper 1024x768
+Source24:	http://www.kde-look.org/content/files/1759-vader.jpg
+# Source24-md5:	e75da9e4949a09be3ea6cc7f88fa1f49
+# Type:  KDE Wallpaper 1024x768
 
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildArch:	noarch
@@ -62,7 +95,8 @@ Obrazki na t³o pulpitu z www.kde-look.org.
 %setup -q -c %{name}-%{version} -T -D
 
 cp -f %{SOURCE0} %{SOURCE1} %{SOURCE2} %{SOURCE3} %{SOURCE4} %{SOURCE5} %{SOURCE6} %{SOURCE7} %{SOURCE8} .
-cp -f %{SOURCE9} %{SOURCE10} %{SOURCE11} %{SOURCE12} %{SOURCE13} .
+cp -f %{SOURCE9} %{SOURCE10} %{SOURCE11} %{SOURCE12} %{SOURCE13} %{SOURCE14} %{SOURCE15} %{SOURCE16} .
+cp -f %{SOURCE17} %{SOURCE18} %{SOURCE19} %{SOURCE20} %{SOURCE21} %{SOURCE22} %{SOURCE23} %{SOURCE24} .
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -71,6 +105,8 @@ install *.{jpg,png} $RPM_BUILD_ROOT%{_datadir}/wallpapers
 
 cd $RPM_BUILD_ROOT%{_datadir}/wallpapers
 tar xzf %{SOURCE5}
+tar xzf %{SOURCE14}
+tar xf %{SOURCE21}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
