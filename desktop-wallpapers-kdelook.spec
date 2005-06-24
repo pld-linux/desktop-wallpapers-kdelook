@@ -2,7 +2,7 @@
 Summary:	Desktop Background Images from www.kde-look.org
 Summary(pl):	Obrazki na t³o pulpitu z www.kde-look.org
 Name:		desktop-wallpapers-kdelook
-Version:	01
+Version:	02
 Release:	1
 License:	GPL
 Group:		X11/Applications/Multimedia
@@ -81,6 +81,27 @@ Source23:	http://www.kde-look.org/content/files/4957-kde-1024.jpg
 Source24:	http://www.kde-look.org/content/files/1759-vader.jpg
 # Source24-md5:	e75da9e4949a09be3ea6cc7f88fa1f49
 # Type:  KDE Wallpaper 1024x768
+Source25:	http://www.kde-look.org/content/files/25764-debian64-wallpaper.jpg
+# Source25-md5:	a34343f3e4f99627450fa2c00e448a0e
+# Type:  KDE Wallpaper 1024x768
+Source26:	http://www.kde-look.org/content/files/25746-Osaka.jpg
+# Source26-md5:	e521ccb03a6eff31d33965811581894d
+# Type:  KDE Wallpaper 1280x1024
+Source27:	http://www.kde-look.org/content/files/25749-katie2.svg
+# Source27-md5:	32b10c9c057b3a1c48ca59eab56a417b
+#Type:  KDE SVG wallpaper (kde 3.4)
+Source28:	http://www.kde-look.org/content/files/25743-Rose.jpg
+# Source28-md5:	b27c81a4a94ca8ec3bb93cda408da18c
+# Type:  KDE Wallpaper 1600x1200
+Source29:       http://www.kde-look.org/content/files/25744-Dew-Drop.jpg
+# Type:  KDE Wallpaper 1600x1200
+Source30:       http://www.kde-look.org/content/files/25748-summer2.png
+# Source30-md5:	fafbe9e1ec466eaca842217ba831f9bc
+# Type:  KDE Wallpaper 1024x768
+Source31:       http://www.kde-look.org/content/files/25745-Grass.jpg
+# Source31-md5:	e7c439aeb0fd7529fbe7affc6a86f794
+# Type:  KDE Wallpaper 1024x768
+
 URL:		http://www.kde-look.org/
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -97,6 +118,7 @@ Obrazki na t³o pulpitu z <http://www.kde-look.org/>.
 cp -f %{SOURCE0} %{SOURCE1} %{SOURCE2} %{SOURCE3} %{SOURCE4} %{SOURCE5} %{SOURCE6} %{SOURCE7} %{SOURCE8} .
 cp -f %{SOURCE9} %{SOURCE10} %{SOURCE11} %{SOURCE12} %{SOURCE13} %{SOURCE14} %{SOURCE15} %{SOURCE16} .
 cp -f %{SOURCE17} %{SOURCE18} %{SOURCE19} %{SOURCE20} %{SOURCE21} %{SOURCE22} %{SOURCE23} %{SOURCE24} .
+cp -f %{SOURCE25} %{SOURCE26} %{SOURCE27} %{SOURCE28} %{SOURCE29} %{SOURCE30} %{SOURCE31} .
 
 %install
 rm -rf $RPM_BUILD_ROOT
