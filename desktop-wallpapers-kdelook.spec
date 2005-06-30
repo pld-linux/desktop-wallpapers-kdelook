@@ -2,12 +2,12 @@
 Summary:	Desktop Background Images from www.kde-look.org
 Summary(pl):	Obrazki na t³o pulpitu z www.kde-look.org
 Name:		desktop-wallpapers-kdelook
-Version:	02
+Version:	03
 Release:	1
 License:	GPL
 Group:		X11/Applications/Multimedia
 Source0:	http://arg0.net/users/vgough/images/2333-valley.png
-# Source0-md5:	476a843ab52775eb412089f277c0083b
+# Source0-md5:	ecc9d2a81eefabaedb04c950dcf05480
 #Type:  KDE Wallpaper 1600x1200
 Source1:	http://www.kde-look.org/content/files/24919-kitov_py001.jpg
 # Source1-md5:	954b159341286dda358201ae782bcaca
@@ -43,7 +43,7 @@ Source11:	http://www.kde-look.org/content/pre2/23814-2.jpg
 # Source11-md5:	45d39f57e17d2359a365165d18be9d7e
 #Type:  KDE Wallpaper 1024x768
 Source12:	http://www.kde-look.org/content/files/20979-altabadia_summer_1200.jpg
-# Source12-md5:	1c6b047dfdfcf8627eb79a9e99f9edfd
+# Source12-md5:	a58bb96b9312f3df4662c51fdd384dc8
 #Type:  KDE Wallpaper 1600x1200
 Source13:	http://www.kde-look.org/content/files/23096-Haallborgsaan.jpg
 # Source13-md5:	e93507e859d44537d93decec2b1f0236
@@ -101,6 +101,19 @@ Source30:       http://www.kde-look.org/content/files/25748-summer2.png
 Source31:       http://www.kde-look.org/content/files/25745-Grass.jpg
 # Source31-md5:	e7c439aeb0fd7529fbe7affc6a86f794
 # Type:  KDE Wallpaper 1024x768
+Source32:	http://www.kde-look.org/content/files/1407-GreyMatrix.jpg
+# Source32-md5:	12e0225aa5e83b6dd867606aab4f9551
+# Type:  KDE Wallpaper 1280x1024
+Source33:	http://www.kde-look.org/content/files/4186-shadows_1280.jpg
+# Source33-md5:	09a65fa2e008e15e2df1af202d365cd2
+# Type:  KDE Wallpaper 1280x1024
+Source34:	http://www.kde-look.org/content/files/1910-KDEAqua.jpg
+# Source34-md5:	00646d3c2f32dd491486a784e9833215
+# Type:  KDE Wallpaper 1024x768
+Source35:	http://www.bergamasterz.com/kde/kde3d.jpg
+# Source35-md5:	87509a03f37750ca66e02fe35716a270
+# Type:  KDE Wallpaper 1280x1024
+
 
 URL:		http://www.kde-look.org/
 BuildArch:	noarch
@@ -119,6 +132,7 @@ cp -f %{SOURCE0} %{SOURCE1} %{SOURCE2} %{SOURCE3} %{SOURCE4} %{SOURCE5} %{SOURCE
 cp -f %{SOURCE9} %{SOURCE10} %{SOURCE11} %{SOURCE12} %{SOURCE13} %{SOURCE14} %{SOURCE15} %{SOURCE16} .
 cp -f %{SOURCE17} %{SOURCE18} %{SOURCE19} %{SOURCE20} %{SOURCE21} %{SOURCE22} %{SOURCE23} %{SOURCE24} .
 cp -f %{SOURCE25} %{SOURCE26} %{SOURCE27} %{SOURCE28} %{SOURCE29} %{SOURCE30} %{SOURCE31} .
+cp -f %{SOURCE32} %{SOURCE33} %{SOURCE34} %{SOURCE35} .
 
 %install
 rm -rf $RPM_BUILD_ROOT
