@@ -7,7 +7,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications/Multimedia
 Source0:	http://arg0.net/users/vgough/images/2333-valley.png
-# Source0-md5:	ecc9d2a81eefabaedb04c950dcf05480
+# Source0-md5:	476a843ab52775eb412089f277c0083b
 #Type:  KDE Wallpaper 1600x1200
 Source1:	http://www.kde-look.org/content/files/24919-kitov_py001.jpg
 # Source1-md5:	954b159341286dda358201ae782bcaca
@@ -43,7 +43,7 @@ Source11:	http://www.kde-look.org/content/pre2/23814-2.jpg
 # Source11-md5:	45d39f57e17d2359a365165d18be9d7e
 #Type:  KDE Wallpaper 1024x768
 Source12:	http://www.kde-look.org/content/files/20979-altabadia_summer_1200.jpg
-# Source12-md5:	a58bb96b9312f3df4662c51fdd384dc8
+# Source12-md5:	1c6b047dfdfcf8627eb79a9e99f9edfd
 #Type:  KDE Wallpaper 1600x1200
 Source13:	http://www.kde-look.org/content/files/23096-Haallborgsaan.jpg
 # Source13-md5:	e93507e859d44537d93decec2b1f0236
