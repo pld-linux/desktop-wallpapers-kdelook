@@ -1,4 +1,3 @@
-# TODO: %{_datadir}/wallpapers dir belongs to X*-libs now
 Summary:	Desktop Background Images from www.kde-look.org
 Summary(pl):	Obrazki na t³o pulpitu z www.kde-look.org
 Name:		desktop-wallpapers-kdelook
@@ -113,8 +112,6 @@ Source34:	http://www.kde-look.org/content/files/1910-KDEAqua.jpg
 Source35:	http://www.bergamasterz.com/kde/kde3d.jpg
 # Source35-md5:	87509a03f37750ca66e02fe35716a270
 # Type:  KDE Wallpaper 1280x1024
-
-
 URL:		http://www.kde-look.org/
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -149,4 +146,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{_datadir}/wallpapers
+%{_datadir}/wallpapers/*
