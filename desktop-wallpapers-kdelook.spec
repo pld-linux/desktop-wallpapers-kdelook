@@ -2,7 +2,7 @@ Summary:	Desktop Background Images from www.kde-look.org
 Summary(pl):	Obrazki na t³o pulpitu z www.kde-look.org
 Name:		desktop-wallpapers-kdelook
 Version:	03
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Multimedia
 Source0:	http://arg0.net/users/vgough/images/2333-valley.png
@@ -92,12 +92,12 @@ Source27:	http://www.kde-look.org/content/files/25749-katie2.svg
 Source28:	http://www.kde-look.org/content/files/25743-Rose.jpg
 # Source28-md5:	b27c81a4a94ca8ec3bb93cda408da18c
 # Type:  KDE Wallpaper 1600x1200
-Source29:       http://www.kde-look.org/content/files/25744-Dew-Drop.jpg
+Source29:	http://www.kde-look.org/content/files/25744-Dew-Drop.jpg
 # Type:  KDE Wallpaper 1600x1200
-Source30:       http://www.kde-look.org/content/files/25748-summer2.png
+Source30:	http://www.kde-look.org/content/files/25748-summer2.png
 # Source30-md5:	fafbe9e1ec466eaca842217ba831f9bc
 # Type:  KDE Wallpaper 1024x768
-Source31:       http://www.kde-look.org/content/files/25745-Grass.jpg
+Source31:	http://www.kde-look.org/content/files/25745-Grass.jpg
 # Source31-md5:	e7c439aeb0fd7529fbe7affc6a86f794
 # Type:  KDE Wallpaper 1024x768
 Source32:	http://www.kde-look.org/content/files/1407-GreyMatrix.jpg
@@ -124,7 +124,6 @@ Obrazki na t³o pulpitu z <http://www.kde-look.org/>.
 
 %prep
 %setup -q -c -T
-
 cp -f %{SOURCE0} %{SOURCE1} %{SOURCE2} %{SOURCE3} %{SOURCE4} %{SOURCE5} %{SOURCE6} %{SOURCE7} %{SOURCE8} .
 cp -f %{SOURCE9} %{SOURCE10} %{SOURCE11} %{SOURCE12} %{SOURCE13} %{SOURCE14} %{SOURCE15} %{SOURCE16} .
 cp -f %{SOURCE17} %{SOURCE18} %{SOURCE19} %{SOURCE20} %{SOURCE21} %{SOURCE22} %{SOURCE23} %{SOURCE24} .
