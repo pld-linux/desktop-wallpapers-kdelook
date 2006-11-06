@@ -93,6 +93,7 @@ Source28:	http://www.kde-look.org/content/files/25743-Rose.jpg
 # Source28-md5:	b27c81a4a94ca8ec3bb93cda408da18c
 # Type:  KDE Wallpaper 1600x1200
 Source29:	http://www.kde-look.org/content/files/25744-Dew-Drop.jpg
+# Source29-md5:	2f4dee5f77a113802150168c7c6e3546
 # Type:  KDE Wallpaper 1600x1200
 Source30:	http://www.kde-look.org/content/files/25748-summer2.png
 # Source30-md5:	fafbe9e1ec466eaca842217ba831f9bc
