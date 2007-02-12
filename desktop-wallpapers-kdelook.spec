@@ -1,5 +1,5 @@
 Summary:	Desktop Background Images from www.kde-look.org
-Summary(pl.UTF-8):   Obrazki na tło pulpitu z www.kde-look.org
+Summary(pl.UTF-8):	Obrazki na tło pulpitu z www.kde-look.org
 Name:		desktop-wallpapers-kdelook
 Version:	03
 Release:	2
