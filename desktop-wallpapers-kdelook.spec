@@ -2,7 +2,7 @@ Summary:	Desktop Background Images from www.kde-look.org
 Summary(pl.UTF-8):	Obrazki na tło pulpitu z www.kde-look.org
 Name:		desktop-wallpapers-kdelook
 Version:	04
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Multimedia
 Source0:	http://arg0.net/users/vgough/images/2333-valley.png
@@ -20,9 +20,9 @@ Source3:	http://www.kde-look.org/content/files/23484-durrutilinux.png
 Source4:	http://www.kde-look.org/content/files/17449-Bubbles.jpg
 # Source4-md5:	392f372276be7f31c2ed04e9e10eeda6
 # Type:  KDE Wallpaper 1600x1200
-Source5:	http://www.kde-look.org/content/files/19342-KDE34-SVG.tar.gz
-# Source5-md5:	7ca5b783f6eb8dd859d5232c986db571
-# Type:	KDE SVG wallpaper (kde 3.4)
+Source5:	http://www.kde-look.org/CONTENT/content-files/52751-tapetapld2.png
+# Source5-md5:	1aad9c7fca6fbab99dfce0b92b79e3fe
+# Type:  KDE Wallpaper 1600x1200
 Source6:	http://www.kde-look.org/content/files/19501-kostka.jpg
 # Source6-md5:	363cf11f62d6e8efc04236540823b8a5
 # Type:	Type:  KDE Wallpaper 1024x768
@@ -47,8 +47,8 @@ Source12:	http://www.kde-look.org/content/files/20979-altabadia_summer_1200.jpg
 Source13:	http://www.kde-look.org/content/files/23096-Haallborgsaan.jpg
 # Source13-md5:	e93507e859d44537d93decec2b1f0236
 # Type:  KDE Wallpaper 1600x1200
-Source14:	http://itaka.sourceforge.net/files/tuXPerience3.tar.gz
-# Source14-md5:	b7122ba0037c926a0aefd69eeefdd9aa
+Source14:	http://www.kde-look.org/content/files/1910-KDEAqua.jpg
+# Source14-md5:	00646d3c2f32dd491486a784e9833215
 # Type:  KDE Wallpaper 1024x768
 Source15:	http://www.kde-look.org/content/files/3270-k-drop.jpg
 # Source15-md5:	ef4911b9b5b74d35697b53ccdb4151b5
@@ -68,12 +68,12 @@ Source19:	http://www.kde-look.org/content/files/5691-4elements.jpg
 Source20:	http://www.kde-look.org/content/files/622-tux-sit.jpg
 # Source20-md5:	45e0f738f62eef75cbdfdb0862153a1f
 # Type:  KDE Wallpaper 1024x768
-Source21:	http://www.kde-look.org/content/files/6027-aquapool.tar
-# Source21-md5:	3ab80277f8870c6ef68237870cd819f3
-# Type:  KDE Wallpaper 1024x768
 Source22:	http://www.kde-look.org/content/files/202-devurandom.jpg
 # Source22-md5:	703596e12bec610fcbf725963b8a7b1a
 # Type:  KDE Wallpaper 1024x768
+Source21:	http://www.bergamasterz.com/kde/kde3d.jpg
+# Source21-md5:	87509a03f37750ca66e02fe35716a270
+# Type:  KDE Wallpaper 1280x1024
 Source23:	http://www.kde-look.org/content/files/4957-kde-1024.jpg
 # Source23-md5:	85ea44820d4de1f90126c3eb9c47e027
 # Type:  KDE Wallpaper 1024x768
@@ -107,15 +107,12 @@ Source32:	http://www.kde-look.org/content/files/1407-GreyMatrix.jpg
 Source33:	http://www.kde-look.org/content/files/4186-shadows_1280.jpg
 # Source33-md5:	09a65fa2e008e15e2df1af202d365cd2
 # Type:  KDE Wallpaper 1280x1024
-Source34:	http://www.kde-look.org/content/files/1910-KDEAqua.jpg
-# Source34-md5:	00646d3c2f32dd491486a784e9833215
+Source100:	http://itaka.sourceforge.net/files/tuXPerience3.tar.gz
+# Source100-md5:	b7122ba0037c926a0aefd69eeefdd9aa
 # Type:  KDE Wallpaper 1024x768
-Source35:	http://www.bergamasterz.com/kde/kde3d.jpg
-# Source35-md5:	87509a03f37750ca66e02fe35716a270
-# Type:  KDE Wallpaper 1280x1024
-Source36:	http://www.kde-look.org/CONTENT/content-files/52751-tapetapld2.png
-# Source36-md5:	1aad9c7fca6fbab99dfce0b92b79e3fe
-# Type:  KDE Wallpaper 1600x1200
+Source101:	http://www.kde-look.org/content/files/6027-aquapool.tar
+# Source101-md5:	3ab80277f8870c6ef68237870cd819f3
+# Type:  KDE Wallpaper 1024x768
 URL:		http://www.kde-look.org/
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -128,24 +125,68 @@ Obrazki na tło pulpitu z <http://www.kde-look.org/>.
 
 %prep
 %setup -q -c -T
-cp -f %{SOURCE0} %{SOURCE1} %{SOURCE2} %{SOURCE3} %{SOURCE4} %{SOURCE5} %{SOURCE6} %{SOURCE7} %{SOURCE8} .
-cp -f %{SOURCE9} %{SOURCE10} %{SOURCE11} %{SOURCE12} %{SOURCE13} %{SOURCE14} %{SOURCE15} %{SOURCE16} .
-cp -f %{SOURCE17} %{SOURCE18} %{SOURCE19} %{SOURCE20} %{SOURCE21} %{SOURCE22} %{SOURCE23} %{SOURCE24} .
-cp -f %{SOURCE25} %{SOURCE26} %{SOURCE27} %{SOURCE28} %{SOURCE29} %{SOURCE30} %{SOURCE31} .
-cp -f %{SOURCE32} %{SOURCE33} %{SOURCE34} %{SOURCE35} %{SOURCE36} .
+
+unpack_kdelook() {
+	local src=$1
+	local file=${1##*/}; file=${file##[0-9]*-}
+	local name=$2
+
+	cp -a $src $file
+	if [ "$name" ]; then
+		cat > ${file%%.*}.desktop <<-EOF
+			[Wallpaper]
+			Encoding=UTF-8
+			File=$file
+			Name=$name
+			ImageType=pixmap
+			${author:+Author=$author}
+		EOF
+	fi
+}
+
+unpack_kdelook %{SOURCE0}
+unpack_kdelook %{SOURCE1}
+unpack_kdelook %{SOURCE2}
+unpack_kdelook %{SOURCE3}
+unpack_kdelook %{SOURCE4}
+unpack_kdelook %{SOURCE5} 'PLD-Linux wallpaper' 'Piotr Budny (http://www.kde-look.org/content/show.php/PLD-Linux+wallpaper?content=52751)'
+unpack_kdelook %{SOURCE6}
+unpack_kdelook %{SOURCE7}
+unpack_kdelook %{SOURCE8}
+unpack_kdelook %{SOURCE9}
+unpack_kdelook %{SOURCE10}
+unpack_kdelook %{SOURCE11}
+unpack_kdelook %{SOURCE12}
+unpack_kdelook %{SOURCE13}
+unpack_kdelook %{SOURCE14}
+unpack_kdelook %{SOURCE15}
+unpack_kdelook %{SOURCE16}
+unpack_kdelook %{SOURCE17}
+unpack_kdelook %{SOURCE18}
+unpack_kdelook %{SOURCE19}
+unpack_kdelook %{SOURCE20}
+unpack_kdelook %{SOURCE21}
+unpack_kdelook %{SOURCE22}
+unpack_kdelook %{SOURCE23}
+unpack_kdelook %{SOURCE24}
+unpack_kdelook %{SOURCE25}
+unpack_kdelook %{SOURCE26}
+unpack_kdelook %{SOURCE27}
+unpack_kdelook %{SOURCE28}
+unpack_kdelook %{SOURCE29}
+unpack_kdelook %{SOURCE30}
+unpack_kdelook %{SOURCE31}
+unpack_kdelook %{SOURCE32}
+unpack_kdelook %{SOURCE33}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_datadir}/wallpapers
-cp -a *.{jpg,png} $RPM_BUILD_ROOT%{_datadir}/wallpapers
+cp -a *.{jpg,png,desktop} $RPM_BUILD_ROOT%{_datadir}/wallpapers
 
 cd $RPM_BUILD_ROOT%{_datadir}/wallpapers
-tar xzf %{SOURCE5}
-tar xzf %{SOURCE14}
-tar xf %{SOURCE21}
-
-# outdated for KDE 3.5
-rm -f $RPM_BUILD_ROOT%{_datadir}/wallpapers/KDE34-SVG.*
+tar xzf %{SOURCE100}
+tar xf %{SOURCE101}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
