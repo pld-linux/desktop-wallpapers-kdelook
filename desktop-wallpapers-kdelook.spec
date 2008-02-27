@@ -114,7 +114,7 @@ Source35:	http://www.bergamasterz.com/kde/kde3d.jpg
 # Source35-md5:	87509a03f37750ca66e02fe35716a270
 # Type:  KDE Wallpaper 1280x1024
 Source36:	http://www.kde-look.org/CONTENT/content-files/52751-tapetapld2.png
-# Source36-md5:	87509a03f37750ca66e02fe35716a270
+# Source36-md5:	1aad9c7fca6fbab99dfce0b92b79e3fe
 # Type:  KDE Wallpaper 1600x1200
 URL:		http://www.kde-look.org/
 BuildArch:	noarch
