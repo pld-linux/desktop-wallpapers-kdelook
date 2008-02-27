@@ -144,6 +144,9 @@ tar xzf %{SOURCE5}
 tar xzf %{SOURCE14}
 tar xf %{SOURCE21}
 
+# outdated for KDE 3.5
+rm -f $RPM_BUILD_ROOT%{_datadir}/wallpapers/KDE34-SVG.*
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
